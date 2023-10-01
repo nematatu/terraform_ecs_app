@@ -1,13 +1,8 @@
-# top_controller_test.rb
-require 'test_helper'
+require "test_helper"
 
-class TopControllerTest < ActiveSupport::TestCase
-  def setup
-    @controller = TopController.new # コントローラーをインスタンス化
-  end
-
+class TopControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get :index 
+    get root_path
     assert_response :success
   end
 end
